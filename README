@@ -1,0 +1,52 @@
+nxfanctl v0.2
+
+1. Instalacja/Usuwanie
+
+Wejdz do katalogu gdzie znajduje sie plik README i wpisz w konsoli
+
+make
+sudo make install
+
+Do poprawnego dzialania programu powinienes miec zainstalowany pakiet 
+echo i wlaczone ACPI w kernelu
+
+Aby usunac program wpisz
+
+sudo make uninstall
+
+2. Plik konfiguracyjny
+
+Plik powinien znajdować się w /etc/nxfan.conf
+
+Ma nastepujaca strukture:
+
+! [WARTOSC]
+Po wykrzykniku wpisujemy ile posiadamy poziomow mocy wentylatora.
+
+temp [WARTOSC1] [WARTOSC2]
+W tym miejscu okreslamy jaki poziom przy jakiej temperaturze ma sie uruchamiac
+[WARTOSC1] - numer poziomu
+[WARTOSC2] - temperatura
+
+fanpath [WARTOSC1] [WARTOSC2]
+[WARTOSC1] - numer poziomu
+[WARTOSC2] - sciezka do obslugi poziomu wentylatora
+
+temppath [WARTOSC]
+Sciezka do odczytu temperatury
+
+timeout [WARTOSC]
+Odstep czasowy w jakim ma byc odczytywana temperatura (polecam 5-10 sekund)
+
+end
+Zawsze na koncu pliku konfiguracyjnego
+
+Przykladowy plik konfiguracyjny dla HP nx7300 znajduje sie w pliku nxfan.conf.exmp
+
+3. Uruchamianie
+
+Wystarczy wpisac w konsoli nxfanctl. Musisz miec uprawieniania roota!
+
+4. UWAGI
+
+Nie odpowiadam za szkody wynikle z uzywania tego programu, prosze o rozwage!

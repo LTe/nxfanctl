@@ -1,0 +1,12 @@
+! 4
+temp 1 60
+temp 2 65
+temp 3 70
+temp 4 75
+timeout 5
+fanpath 1 /proc/acpi/fan/C327/state
+fanpath 2 /proc/acpi/fan/C326/state
+fanpath 3 /proc/acpi/fan/C325/state
+fanpath 4 /proc/acpi/fan/C324/state
+temppath /proc/acpi/thermal_zone/TZ1/temperature
+end
